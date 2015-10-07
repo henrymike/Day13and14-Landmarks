@@ -75,6 +75,7 @@
         _addressCityTextField.text = _currentLandmark.landmarkCity;
         _addressStateTextField.text = _currentLandmark.landmarkState;
         _addressZipTextField.text = _currentLandmark.landmarkZip;
+        _phoneTextField.text = _currentLandmark.landmarkPhone;
         _websiteTextField.text = _currentLandmark.landmarkWebsite;
         _descriptionTextView.text = _currentLandmark.landmarkDescription;
     } else {
