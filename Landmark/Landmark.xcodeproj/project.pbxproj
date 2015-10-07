@@ -19,6 +19,7 @@
 		5598BD311BC58D7100374B60 /* Landmarks+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD2E1BC58D7000374B60 /* Landmarks+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		5598BD321BC58D7100374B60 /* Landmarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD301BC58D7100374B60 /* Landmarks.m */; settings = {ASSET_TAGS = (); }; };
 		5598BD361BC59DF600374B60 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD351BC59DF600374B60 /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5598BD391BC5BCB400374B60 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD381BC5BCB400374B60 /* MapViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		5598BD301BC58D7100374B60 /* Landmarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Landmarks.m; sourceTree = "<group>"; };
 		5598BD341BC59DF600374B60 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		5598BD351BC59DF600374B60 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5598BD371BC5BCB400374B60 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		5598BD381BC5BCB400374B60 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				5598BD131BC58B2E00374B60 /* AppDelegate.m */,
 				5598BD151BC58B2E00374B60 /* ViewController.h */,
 				5598BD161BC58B2E00374B60 /* ViewController.m */,
+				5598BD371BC5BCB400374B60 /* MapViewController.h */,
+				5598BD381BC5BCB400374B60 /* MapViewController.m */,
 				5598BD341BC59DF600374B60 /* DetailViewController.h */,
 				5598BD351BC59DF600374B60 /* DetailViewController.m */,
 				5598BD181BC58B2E00374B60 /* Main.storyboard */,
@@ -186,6 +191,7 @@
 				5598BD171BC58B2E00374B60 /* ViewController.m in Sources */,
 				5598BD311BC58D7100374B60 /* Landmarks+CoreDataProperties.m in Sources */,
 				5598BD141BC58B2E00374B60 /* AppDelegate.m in Sources */,
+				5598BD391BC5BCB400374B60 /* MapViewController.m in Sources */,
 				5598BD321BC58D7100374B60 /* Landmarks.m in Sources */,
 				5598BD111BC58B2E00374B60 /* main.m in Sources */,
 				5598BD1D1BC58B2E00374B60 /* Landmark.xcdatamodeld in Sources */,

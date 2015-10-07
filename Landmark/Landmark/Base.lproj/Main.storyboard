@@ -48,6 +48,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Landmarks" id="LPS-ux-L7c">
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="pGr-vU-od1">
+                            <connections>
+                                <segue destination="W5H-wF-xCr" kind="show" id="hEI-b3-7vx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p4O-FY-wh3">
                             <connections>
                                 <segue destination="6Py-mZ-bIk" kind="show" identifier="segueAddLandmark" id="kyh-8U-vgL"/>
@@ -157,6 +162,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Il-g8-F8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1721" y="313"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="o9a-oz-mXF">
+            <objects>
+                <viewController id="W5H-wF-xCr" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3b5-OI-Jxn"/>
+                        <viewControllerLayoutGuide type="bottom" id="nJ3-kf-JiI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cbh-CS-RIu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-4a-4kB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="W5H-wF-xCr" id="HEx-Wb-oUG"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h5F-4a-4kB" firstAttribute="top" secondItem="3b5-OI-Jxn" secondAttribute="bottom" constant="-64" id="CyW-C4-uIG"/>
+                            <constraint firstItem="h5F-4a-4kB" firstAttribute="leading" secondItem="Cbh-CS-RIu" secondAttribute="leadingMargin" constant="-20" id="IRG-uM-PZc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h5F-4a-4kB" secondAttribute="trailing" constant="-20" id="N3S-Ke-LyA"/>
+                            <constraint firstItem="nJ3-kf-JiI" firstAttribute="top" secondItem="h5F-4a-4kB" secondAttribute="bottom" id="sZF-F2-FFs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="gIG-qe-miO"/>
+                    <connections>
+                        <outlet property="landmarksMapView" destination="h5F-4a-4kB" id="EJU-Gh-Lhd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9f-jX-azj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368" y="313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9mT-Fc-cCx">
