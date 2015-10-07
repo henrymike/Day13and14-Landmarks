@@ -71,6 +71,12 @@
     _landmarksArray = [self fetchLandmarks];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _landmarksArray = [self fetchLandmarks];
+    [_landmarksTableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
