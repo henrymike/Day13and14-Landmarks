@@ -19,6 +19,19 @@
 
 @implementation ViewController
 
+#pragma mark - Interactivity Methods
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"Row to delete: %li",indexPath.row);
+        Landmarks *landmarkToDelete = _landmarksArray[indexPath.row];
+        [_managedObjectContext deleteObject:landmarkToDelete];
+        [_appDelegate saveContext];
+        _landmarksArray = [self fetchLandmarks];
+        [_landmarksTableView reloadData];
+    }
+}
+
 #pragma mark - Table View Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
