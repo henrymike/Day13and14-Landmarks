@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "Landmarks.h"
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+
+@property (nonatomic, strong) NSArray                *landmarksArray;
 
 @end

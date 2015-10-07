@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VOQ-za-UhW">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="landmarksCell" rowHeight="44" id="IyC-3d-zdd">
@@ -44,13 +44,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="VOQ-za-UhW" secondAttribute="trailing" constant="-20" id="OJB-Vr-WZd"/>
                             <constraint firstItem="VOQ-za-UhW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="S8G-4H-otO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VOQ-za-UhW" secondAttribute="bottom" id="lps-lk-DgM"/>
-                            <constraint firstItem="VOQ-za-UhW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="wEq-p0-a3y"/>
+                            <constraint firstItem="VOQ-za-UhW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="wEq-p0-a3y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Landmarks" id="LPS-ux-L7c">
                         <barButtonItem key="leftBarButtonItem" title="Map" id="pGr-vU-od1">
                             <connections>
-                                <segue destination="W5H-wF-xCr" kind="show" id="hEI-b3-7vx"/>
+                                <segue destination="W5H-wF-xCr" kind="show" identifier="segueMapView" id="hEI-b3-7vx"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p4O-FY-wh3">

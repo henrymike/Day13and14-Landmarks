@@ -9,14 +9,39 @@
 #import "MapViewController.h"
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "Landmarks.h"
 
 @interface MapViewController ()
-@property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, weak) IBOutlet MKMapView  *landmarksMapView;
+
+@property (nonatomic, strong)            AppDelegate              *appDelegate;
+@property (nonatomic, strong)            NSManagedObjectContext   *managedObjectContext;
+@property (nonatomic, strong)            CLLocationManager        *locationManager;
+@property (nonatomic, weak)     IBOutlet MKMapView                *landmarksMapView;
 
 @end
 
 @implementation MapViewController
+
+#pragma mark - Annotation Methods
+
+- (void)annotateMapLocations {
+    NSMutableArray *pinsToRemove = [[NSMutableArray alloc] init];
+    for (id <MKAnnotation> annot in [_landmarksMapView annotations]) {
+        if ([annot isKindOfClass: [MKPointAnnotation class]]) {
+            [pinsToRemove addObject:annot];
+        }
+    }
+    [_landmarksMapView removeAnnotations:pinsToRemove];
+    
+    NSMutableArray *pinsToAdd = [[NSMutableArray alloc] init];
+    for (Landmarks *landmark in _landmarksArray) {
+        MKPointAnnotation *pa = [[MKPointAnnotation alloc] init];
+        pa.coordinate = CLLocationCoordinate2DMake([landmark.landmarkLat doubleValue], [landmark.landmarkLong doubleValue]);
+        pa.title = landmark.landmarkName;
+        [pinsToAdd addObject:pa];
+    }
+    [_landmarksMapView addAnnotations:pinsToAdd];
+}
 
 #pragma mark - Location Methods
 
@@ -57,15 +82,29 @@
     }
 }
 
+#pragma mark - Core Data Methods
+
+- (NSArray *)fetchLandmarks {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Landmarks" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchResults = [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    return fetchResults;
+}
+
 #pragma mark - Life Cycle Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    _managedObjectContext = _appDelegate.managedObjectContext;
+    _landmarksArray = [self fetchLandmarks];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setupLocationMonitoring];
+    [self annotateMapLocations];
 }
 
 - (void)didReceiveMemoryWarning {
