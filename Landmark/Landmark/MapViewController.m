@@ -43,6 +43,28 @@
     [_landmarksMapView addAnnotations:pinsToAdd];
 }
 
+- (void)zoomToPins {
+    [_landmarksMapView showAnnotations:[_landmarksMapView annotations] animated:true];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    if (annotation != mapView.userLocation) {
+        MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
+        if (annotationView == nil) {
+            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
+        }
+        annotationView.canShowCallout = true;
+        annotationView.animatesDrop = true;
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        return annotationView;
+    }
+    return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    NSLog(@"Pin title tapped");
+}
+
 #pragma mark - Location Methods
 
 - (void)turnOnLocationMonitoring {
@@ -105,6 +127,7 @@
     [super viewWillAppear:animated];
     [self setupLocationMonitoring];
     [self annotateMapLocations];
+    [self zoomToPins];
 }
 
 - (void)didReceiveMemoryWarning {
