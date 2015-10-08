@@ -58,6 +58,9 @@
         Landmarks *currentLandmark = _appDelegate.landmarksArray[indexPath.row];
         destController.currentLandmark = currentLandmark;
     }
+    if ([[segue identifier] isEqualToString:@"segueShowMapLandmark"]) {
+        Landmarks *tappedLandmark = [_appDelegate fetchLandmarks ]
+    }
     else if ([[segue identifier] isEqualToString:@"segueAddLandmark"]) {
         destController.currentLandmark = nil;
     }

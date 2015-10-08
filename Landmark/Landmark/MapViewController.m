@@ -63,6 +63,7 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     NSLog(@"Pin title tapped");
+    
 }
 
 #pragma mark - Location Methods

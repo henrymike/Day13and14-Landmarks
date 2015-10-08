@@ -12,9 +12,16 @@
 
 @interface FullDetailViewController ()
 
-@property (nonatomic, strong)            AppDelegate              *appDelegate;
-@property (nonatomic, strong)            NSManagedObjectContext   *managedObjectContext;
-@property (nonatomic, weak)     IBOutlet UILabel                  *tempLabel;
+@property (nonatomic, strong)            AppDelegate                *appDelegate;
+@property (nonatomic, strong)            NSManagedObjectContext     *managedObjectContext;
+@property (nonatomic, weak)     IBOutlet UILabel                    *nameLabel;
+@property (nonatomic, weak)     IBOutlet UILabel                    *addressStreetLabel;
+@property (nonatomic, weak)     IBOutlet UILabel                    *addressCityLabel;
+@property (nonatomic, weak)     IBOutlet UILabel                    *addressStateLabel;
+@property (nonatomic, weak)     IBOutlet UILabel                    *addressZipLabel;
+@property (nonatomic, weak)     IBOutlet UILabel                    *websiteLabel;
+@property (nonatomic, weak)     IBOutlet UILabel                    *phoneLabel;
+@property (nonatomic, weak)     IBOutlet UILabel                    *descriptionLabel;
 
 @end
 
@@ -31,7 +38,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _tempLabel.text = _currentLandmark.landmarkName;
+    _nameLabel.text = _currentLandmark.landmarkName;
 }
 
 - (void)didReceiveMemoryWarning {
