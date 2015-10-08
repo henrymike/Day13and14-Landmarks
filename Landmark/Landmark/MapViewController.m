@@ -34,7 +34,7 @@
     [_landmarksMapView removeAnnotations:pinsToRemove];
     
     NSMutableArray *pinsToAdd = [[NSMutableArray alloc] init];
-    for (Landmarks *landmark in _landmarksArray) {
+    for (Landmarks *landmark in _appDelegate.landmarksArray) {
         MKPointAnnotation *pa = [[MKPointAnnotation alloc] init];
         pa.coordinate = CLLocationCoordinate2DMake([landmark.landmarkLat doubleValue], [landmark.landmarkLong doubleValue]);
         pa.title = landmark.landmarkName;
@@ -82,23 +82,23 @@
     }
 }
 
-#pragma mark - Core Data Methods
-
-- (NSArray *)fetchLandmarks {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Landmarks" inManagedObjectContext:_managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSArray *fetchResults = [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    return fetchResults;
-}
+//#pragma mark - Core Data Methods
+//
+//- (NSArray *)fetchLandmarks {
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Landmarks" inManagedObjectContext:_managedObjectContext];
+//    [fetchRequest setEntity:entity];
+//    NSArray *fetchResults = [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
+//    return fetchResults;
+//}
 
 #pragma mark - Life Cycle Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    _managedObjectContext = _appDelegate.managedObjectContext;
-    _landmarksArray = [self fetchLandmarks];
+//    _managedObjectContext = _appDelegate.managedObjectContext;
+    _appDelegate.landmarksArray = [_appDelegate fetchLandmarks];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

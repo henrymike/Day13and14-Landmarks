@@ -12,6 +12,6 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
-@property (nonatomic, strong) NSArray                *landmarksArray;
+//@property (nonatomic, strong) NSArray                *landmarksArray;
 
 @end

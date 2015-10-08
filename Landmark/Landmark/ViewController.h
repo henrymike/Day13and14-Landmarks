@@ -11,8 +11,8 @@
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong) NSArray                *landmarksArray;
+//@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+//@property (nonatomic, strong) NSArray                *landmarksArray;
 @property (nonatomic, weak)   IBOutlet UITableView   *landmarksTableView;
 
 @end

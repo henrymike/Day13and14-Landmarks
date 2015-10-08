@@ -14,6 +14,17 @@
 
 @implementation AppDelegate
 
+#pragma mark - Core Data Methods
+
+- (NSArray *)fetchLandmarks {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Landmarks" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchResults = [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    return fetchResults;
+}
+
+#pragma mark - App Life Cycle Methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
