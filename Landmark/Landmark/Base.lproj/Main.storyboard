@@ -48,11 +48,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Landmarks" id="LPS-ux-L7c">
-                        <barButtonItem key="leftBarButtonItem" title="Map" id="pGr-vU-od1">
-                            <connections>
-                                <segue destination="W5H-wF-xCr" kind="show" identifier="segueMapView" id="hEI-b3-7vx"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="pGr-vU-od1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="p4O-FY-wh3">
                             <connections>
                                 <segue destination="6Py-mZ-bIk" kind="show" identifier="segueAddLandmark" id="kyh-8U-vgL"/>
@@ -163,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="2533" y="313"/>
         </scene>
-        <!--Map-->
+        <!--Landmarks-->
         <scene sceneID="o9a-oz-mXF">
             <objects>
                 <viewController id="W5H-wF-xCr" customClass="MapViewController" sceneMemberID="viewController">
@@ -176,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-4a-4kB">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <connections>
                                     <outlet property="delegate" destination="W5H-wF-xCr" id="HEx-Wb-oUG"/>
                                 </connections>
@@ -184,26 +180,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="h5F-4a-4kB" firstAttribute="top" secondItem="3b5-OI-Jxn" secondAttribute="bottom" constant="-64" id="CyW-C4-uIG"/>
+                            <constraint firstItem="h5F-4a-4kB" firstAttribute="top" secondItem="3b5-OI-Jxn" secondAttribute="bottom" id="CyW-C4-uIG"/>
                             <constraint firstItem="h5F-4a-4kB" firstAttribute="leading" secondItem="Cbh-CS-RIu" secondAttribute="leadingMargin" constant="-20" id="IRG-uM-PZc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h5F-4a-4kB" secondAttribute="trailing" constant="-20" id="N3S-Ke-LyA"/>
-                            <constraint firstItem="nJ3-kf-JiI" firstAttribute="top" secondItem="h5F-4a-4kB" secondAttribute="bottom" constant="-49" id="sZF-F2-FFs"/>
+                            <constraint firstItem="nJ3-kf-JiI" firstAttribute="top" secondItem="h5F-4a-4kB" secondAttribute="bottom" id="sZF-F2-FFs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="gIG-qe-miO"/>
+                    <navigationItem key="navigationItem" title="Landmarks" id="sgu-MQ-8Uf"/>
                     <connections>
                         <outlet property="landmarksMapView" destination="h5F-4a-4kB" id="EJU-Gh-Lhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9f-jX-azj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3180" y="313"/>
+            <point key="canvasLocation" x="1869" y="1009"/>
         </scene>
-        <!--Item-->
+        <!--List View-->
         <scene sceneID="9mT-Fc-cCx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IXa-dN-mlw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0J7-bx-sU6"/>
+                    <tabBarItem key="tabBarItem" title="List View" id="0J7-bx-sU6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gc3-h9-XOv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -229,11 +225,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="IXa-dN-mlw" kind="relationship" relationship="viewControllers" id="cce-Rd-Jfg"/>
+                        <segue destination="Xpi-LH-7kS" kind="relationship" relationship="viewControllers" id="RVv-FK-fo8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v57-BY-UrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393" y="313"/>
+            <point key="canvasLocation" x="343" y="699"/>
+        </scene>
+        <!--Map View-->
+        <scene sceneID="NgO-rA-ZPa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xpi-LH-7kS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map View" id="ahf-Qs-w6A"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w7h-kh-mKE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W5H-wF-xCr" kind="relationship" relationship="rootViewController" id="nGl-PW-OIn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICt-Lo-bMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1205" y="1009"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
