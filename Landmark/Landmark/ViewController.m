@@ -52,7 +52,13 @@
         NSIndexPath *indexPath = [_landmarksTableView indexPathForSelectedRow];
         Landmarks *currentLandmark = _appDelegate.landmarksArray[indexPath.row];
         destController.currentLandmark = currentLandmark;
-    } else if ([[segue identifier] isEqualToString:@"segueAddLandmark"]) {
+    }
+    if ([[segue identifier] isEqualToString:@"segueShowLandmark"]) {
+        NSIndexPath *indexPath = [_landmarksTableView indexPathForSelectedRow];
+        Landmarks *currentLandmark = _appDelegate.landmarksArray[indexPath.row];
+        destController.currentLandmark = currentLandmark;
+    }
+    else if ([[segue identifier] isEqualToString:@"segueAddLandmark"]) {
         destController.currentLandmark = nil;
     }
 }

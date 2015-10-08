@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="6Py-mZ-bIk" kind="show" identifier="segueEditLandmark" id="sWB-UK-VqQ"/>
+                                            <segue destination="gTa-dy-U10" kind="show" identifier="segueShowLandmark" id="Kx1-Ym-gsj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -159,6 +159,35 @@
             </objects>
             <point key="canvasLocation" x="2533" y="313"/>
         </scene>
+        <!--Full Detail View Controller-->
+        <scene sceneID="DHC-uG-zq7">
+            <objects>
+                <viewController id="gTa-dy-U10" customClass="FullDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7JC-SA-mN6"/>
+                        <viewControllerLayoutGuide type="bottom" id="KWk-xc-7ct"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zf3-XF-rpB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-j6-7WK">
+                                <rect key="frame" x="20" y="86" width="162" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tempLabel" destination="ieh-j6-7WK" id="eJe-B1-FVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xw-Ac-WPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2533" y="1009"/>
+        </scene>
         <!--Landmarks-->
         <scene sceneID="o9a-oz-mXF">
             <objects>
@@ -252,7 +281,4 @@
             <point key="canvasLocation" x="1205" y="1009"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="kyh-8U-vgL"/>
-    </inferredMetricsTieBreakers>
 </document>

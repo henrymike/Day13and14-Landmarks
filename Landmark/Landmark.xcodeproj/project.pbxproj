@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55429DA41BC6F9950001B8D3 /* FullDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55429DA31BC6F9950001B8D3 /* FullDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5598BD111BC58B2E00374B60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD101BC58B2E00374B60 /* main.m */; };
 		5598BD141BC58B2E00374B60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD131BC58B2E00374B60 /* AppDelegate.m */; };
 		5598BD171BC58B2E00374B60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD161BC58B2E00374B60 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55429DA21BC6F9950001B8D3 /* FullDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullDetailViewController.h; sourceTree = "<group>"; };
+		55429DA31BC6F9950001B8D3 /* FullDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullDetailViewController.m; sourceTree = "<group>"; };
 		5598BD0C1BC58B2E00374B60 /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5598BD101BC58B2E00374B60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5598BD121BC58B2E00374B60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				5598BD381BC5BCB400374B60 /* MapViewController.m */,
 				5598BD341BC59DF600374B60 /* DetailViewController.h */,
 				5598BD351BC59DF600374B60 /* DetailViewController.m */,
+				55429DA21BC6F9950001B8D3 /* FullDetailViewController.h */,
+				55429DA31BC6F9950001B8D3 /* FullDetailViewController.m */,
 				5598BD181BC58B2E00374B60 /* Main.storyboard */,
 				5598BD1E1BC58B2E00374B60 /* Assets.xcassets */,
 				5598BD201BC58B2E00374B60 /* LaunchScreen.storyboard */,
@@ -189,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5598BD171BC58B2E00374B60 /* ViewController.m in Sources */,
+				55429DA41BC6F9950001B8D3 /* FullDetailViewController.m in Sources */,
 				5598BD311BC58D7100374B60 /* Landmarks+CoreDataProperties.m in Sources */,
 				5598BD141BC58B2E00374B60 /* AppDelegate.m in Sources */,
 				5598BD391BC5BCB400374B60 /* MapViewController.m in Sources */,
@@ -342,6 +348,7 @@
 				5598BD281BC58B2E00374B60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
