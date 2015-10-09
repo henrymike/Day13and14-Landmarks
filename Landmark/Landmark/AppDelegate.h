@@ -21,7 +21,7 @@
 
 
 - (NSArray *)fetchLandmarks;
-- (NSArray *)fetchLandmarksByName: (NSString *)landmarkName;
+- (Landmarks *)fetchLandmarksByName: (NSString *)landmarkName;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

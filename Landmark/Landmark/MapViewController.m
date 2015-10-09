@@ -64,13 +64,23 @@
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    NSLog(@"Pin title tapped");
+    NSLog(@"Pin title tapped %@",view.annotation.title);
     _appDelegate.selectedLandmarkName = view.annotation.title;
     [self performSegueWithIdentifier:@"segueShowMapLandmark" sender:self];
 }
 
+
 #pragma mark - Table View Methods
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *destController = [segue destinationViewController];
+    NSLog(@"Segue ID:%@",segue.identifier);
+    if ([[segue identifier] isEqualToString:@"segueShowMapLandmark"]) {
+        Landmarks *currentLandmark = [_appDelegate fetchLandmarksByName:_appDelegate.selectedLandmarkName];
+        destController.currentLandmark = currentLandmark;
+        //    [super prepareForSegue:segue sender:sender];
+    }
+}
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //    DetailViewController *destController = [segue destinationViewController];
 //    if ([[segue identifier] isEqualToString:@"segueShowMapLandmark"]) {

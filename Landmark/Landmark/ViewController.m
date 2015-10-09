@@ -48,6 +48,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"Segue ID:%@",segue.identifier);
     DetailViewController *destController = [segue destinationViewController];
     if ([[segue identifier] isEqualToString:@"segueEditLandmark"]) {
         NSIndexPath *indexPath = [_landmarksTableView indexPathForSelectedRow];
@@ -59,10 +60,10 @@
         Landmarks *currentLandmark = _appDelegate.landmarksArray[indexPath.row];
         destController.currentLandmark = currentLandmark;
     }
-    if ([[segue identifier] isEqualToString:@"segueShowMapLandmark"]) {
-        Landmarks *currentLandmark = [_appDelegate fetchLandmarksByName:_appDelegate.selectedLandmarkName];
-        destController.currentLandmark = currentLandmark;
-    }
+//    if ([[segue identifier] isEqualToString:@"segueShowMapLandmark"]) {
+//        Landmarks *currentLandmark = [_appDelegate fetchLandmarksByName:_appDelegate.selectedLandmarkName];
+//        destController.currentLandmark = currentLandmark;
+//    }
     else if ([[segue identifier] isEqualToString:@"segueAddLandmark"]) {
         destController.currentLandmark = nil;
     }
