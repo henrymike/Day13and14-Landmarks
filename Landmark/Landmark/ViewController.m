@@ -16,6 +16,7 @@
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
+
 @end
 
 @implementation ViewController
@@ -59,7 +60,8 @@
         destController.currentLandmark = currentLandmark;
     }
     if ([[segue identifier] isEqualToString:@"segueShowMapLandmark"]) {
-        Landmarks *tappedLandmark = [_appDelegate fetchLandmarks ]
+        Landmarks *currentLandmark = [_appDelegate fetchLandmarksByName:_appDelegate.selectedLandmarkName];
+        destController.currentLandmark = currentLandmark;
     }
     else if ([[segue identifier] isEqualToString:@"segueAddLandmark"]) {
         destController.currentLandmark = nil;

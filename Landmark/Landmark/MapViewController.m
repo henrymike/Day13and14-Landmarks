@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "DetailViewController.h"
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "Landmarks.h"
@@ -17,6 +18,7 @@
 @property (nonatomic, strong)            NSManagedObjectContext   *managedObjectContext;
 @property (nonatomic, strong)            CLLocationManager        *locationManager;
 @property (nonatomic, weak)     IBOutlet MKMapView                *landmarksMapView;
+
 
 @end
 
@@ -63,8 +65,19 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     NSLog(@"Pin title tapped");
-    
+    _appDelegate.selectedLandmarkName = view.annotation.title;
+    [self performSegueWithIdentifier:@"segueShowMapLandmark" sender:self];
 }
+
+#pragma mark - Table View Methods
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    DetailViewController *destController = [segue destinationViewController];
+//    if ([[segue identifier] isEqualToString:@"segueShowMapLandmark"]) {
+//        Landmarks *currentLandmark = [_appDelegate fetchLandmarksByName:_appDelegate.selectedLandmarkName];
+//        destController.currentLandmark = currentLandmark;
+//    }
+//}
 
 #pragma mark - Location Methods
 

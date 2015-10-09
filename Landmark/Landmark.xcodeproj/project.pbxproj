@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		55429DA41BC6F9950001B8D3 /* FullDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55429DA31BC6F9950001B8D3 /* FullDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		55429DAF1BC81AF90001B8D3 /* FDR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55429DA61BC81AF90001B8D3 /* FDR.jpg */; settings = {ASSET_TAGS = (); }; };
+		55429DB01BC81AF90001B8D3 /* Jefferson.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55429DA71BC81AF90001B8D3 /* Jefferson.jpg */; settings = {ASSET_TAGS = (); }; };
+		55429DB11BC81AF90001B8D3 /* Lincoln.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55429DA81BC81AF90001B8D3 /* Lincoln.jpg */; settings = {ASSET_TAGS = (); }; };
+		55429DB21BC81AF90001B8D3 /* McDonalds.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55429DA91BC81AF90001B8D3 /* McDonalds.jpg */; settings = {ASSET_TAGS = (); }; };
+		55429DB31BC81AF90001B8D3 /* Newseum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55429DAA1BC81AF90001B8D3 /* Newseum.jpg */; settings = {ASSET_TAGS = (); }; };
+		55429DB41BC81AF90001B8D3 /* TheIronYard.png in Resources */ = {isa = PBXBuildFile; fileRef = 55429DAB1BC81AF90001B8D3 /* TheIronYard.png */; settings = {ASSET_TAGS = (); }; };
+		55429DB51BC81AF90001B8D3 /* Verizon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55429DAC1BC81AF90001B8D3 /* Verizon.png */; settings = {ASSET_TAGS = (); }; };
+		55429DB61BC81AF90001B8D3 /* WashingtonMonument.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55429DAD1BC81AF90001B8D3 /* WashingtonMonument.jpg */; settings = {ASSET_TAGS = (); }; };
+		55429DB71BC81AF90001B8D3 /* WW2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55429DAE1BC81AF90001B8D3 /* WW2.jpg */; settings = {ASSET_TAGS = (); }; };
 		5598BD111BC58B2E00374B60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD101BC58B2E00374B60 /* main.m */; };
 		5598BD141BC58B2E00374B60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD131BC58B2E00374B60 /* AppDelegate.m */; };
 		5598BD171BC58B2E00374B60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5598BD161BC58B2E00374B60 /* ViewController.m */; };
@@ -26,6 +35,15 @@
 /* Begin PBXFileReference section */
 		55429DA21BC6F9950001B8D3 /* FullDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullDetailViewController.h; sourceTree = "<group>"; };
 		55429DA31BC6F9950001B8D3 /* FullDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullDetailViewController.m; sourceTree = "<group>"; };
+		55429DA61BC81AF90001B8D3 /* FDR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FDR.jpg; sourceTree = "<group>"; };
+		55429DA71BC81AF90001B8D3 /* Jefferson.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jefferson.jpg; sourceTree = "<group>"; };
+		55429DA81BC81AF90001B8D3 /* Lincoln.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lincoln.jpg; sourceTree = "<group>"; };
+		55429DA91BC81AF90001B8D3 /* McDonalds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = McDonalds.jpg; sourceTree = "<group>"; };
+		55429DAA1BC81AF90001B8D3 /* Newseum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Newseum.jpg; sourceTree = "<group>"; };
+		55429DAB1BC81AF90001B8D3 /* TheIronYard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TheIronYard.png; sourceTree = "<group>"; };
+		55429DAC1BC81AF90001B8D3 /* Verizon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Verizon.png; sourceTree = "<group>"; };
+		55429DAD1BC81AF90001B8D3 /* WashingtonMonument.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WashingtonMonument.jpg; sourceTree = "<group>"; };
+		55429DAE1BC81AF90001B8D3 /* WW2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WW2.jpg; sourceTree = "<group>"; };
 		5598BD0C1BC58B2E00374B60 /* Landmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5598BD101BC58B2E00374B60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5598BD121BC58B2E00374B60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55429DA51BC81AF90001B8D3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				55429DA61BC81AF90001B8D3 /* FDR.jpg */,
+				55429DA71BC81AF90001B8D3 /* Jefferson.jpg */,
+				55429DA81BC81AF90001B8D3 /* Lincoln.jpg */,
+				55429DA91BC81AF90001B8D3 /* McDonalds.jpg */,
+				55429DAA1BC81AF90001B8D3 /* Newseum.jpg */,
+				55429DAB1BC81AF90001B8D3 /* TheIronYard.png */,
+				55429DAC1BC81AF90001B8D3 /* Verizon.png */,
+				55429DAD1BC81AF90001B8D3 /* WashingtonMonument.jpg */,
+				55429DAE1BC81AF90001B8D3 /* WW2.jpg */,
+			);
+			name = Images;
+			path = "images for Nav";
+			sourceTree = "<group>";
+		};
 		5598BD031BC58B2E00374B60 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				5598BD331BC58D7800374B60 /* Data */,
+				55429DA51BC81AF90001B8D3 /* Images */,
 				5598BD121BC58B2E00374B60 /* AppDelegate.h */,
 				5598BD131BC58B2E00374B60 /* AppDelegate.m */,
 				5598BD151BC58B2E00374B60 /* ViewController.h */,
@@ -182,7 +218,16 @@
 			files = (
 				5598BD221BC58B2E00374B60 /* LaunchScreen.storyboard in Resources */,
 				5598BD1F1BC58B2E00374B60 /* Assets.xcassets in Resources */,
+				55429DB41BC81AF90001B8D3 /* TheIronYard.png in Resources */,
+				55429DB21BC81AF90001B8D3 /* McDonalds.jpg in Resources */,
+				55429DAF1BC81AF90001B8D3 /* FDR.jpg in Resources */,
+				55429DB51BC81AF90001B8D3 /* Verizon.png in Resources */,
+				55429DB71BC81AF90001B8D3 /* WW2.jpg in Resources */,
+				55429DB11BC81AF90001B8D3 /* Lincoln.jpg in Resources */,
 				5598BD1A1BC58B2E00374B60 /* Main.storyboard in Resources */,
+				55429DB31BC81AF90001B8D3 /* Newseum.jpg in Resources */,
+				55429DB61BC81AF90001B8D3 /* WashingtonMonument.jpg in Resources */,
+				55429DB01BC81AF90001B8D3 /* Jefferson.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

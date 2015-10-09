@@ -8,17 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Landmarks.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, strong) NSArray                *landmarksArray;
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (strong, nonatomic) UIWindow                               *window;
+@property (nonatomic, strong) NSArray                                *landmarksArray;
+@property (nonatomic, strong) NSString                               *selectedLandmarkName;
+@property (readonly, strong, nonatomic) NSManagedObjectContext       *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel         *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (NSArray *)fetchLandmarks;
 
+- (NSArray *)fetchLandmarks;
+- (NSArray *)fetchLandmarksByName: (NSString *)landmarkName;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

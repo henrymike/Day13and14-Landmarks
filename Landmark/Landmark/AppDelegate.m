@@ -23,6 +23,18 @@
     NSArray *fetchResults = [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
     return fetchResults;
 }
+//TODO: try using an objectID instead of setting a predicate based on a text string
+- (Landmarks *)fetchLandmarksByName: (NSString *)landmarkName {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Landmarks" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"landmarkName contains[cd] %@",landmarkName];
+    [fetchRequest setPredicate:predicate];
+    
+    NSArray *fetchResults = [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    return fetchResults[0];
+}
 
 #pragma mark - App Life Cycle Methods
 

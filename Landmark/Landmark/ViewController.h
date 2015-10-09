@@ -13,7 +13,7 @@
 
 //@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 //@property (nonatomic, strong) NSArray                *landmarksArray;
-@property (nonatomic, weak)   IBOutlet UITableView   *landmarksTableView;
+@property (nonatomic, weak)   IBOutlet UITableView     *landmarksTableView;
 
 @end
 

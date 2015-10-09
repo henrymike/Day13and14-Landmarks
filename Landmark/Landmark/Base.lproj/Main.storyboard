@@ -171,62 +171,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Landmark Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-j6-7WK">
-                                <rect key="frame" x="269" y="93" width="169" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-sg-rJy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="HSa-R3-fjl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Landmark Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieh-j6-7WK">
+                                <rect key="frame" x="20" y="270" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Street" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peN-7f-Gwk">
-                                <rect key="frame" x="269" y="122" width="169" height="21"/>
+                                <rect key="frame" x="20" y="294" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaP-OM-061">
-                                <rect key="frame" x="269" y="146" width="169" height="21"/>
+                                <rect key="frame" x="20" y="318" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCz-fI-HaQ">
-                                <rect key="frame" x="269" y="167" width="169" height="21"/>
+                                <rect key="frame" x="20" y="339" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auT-3C-Hvp">
-                                <rect key="frame" x="269" y="190" width="169" height="21"/>
+                                <rect key="frame" x="20" y="362" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oll-9t-iw6">
-                                <rect key="frame" x="269" y="212" width="169" height="21"/>
+                                <rect key="frame" x="20" y="384" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0HK-sg-rJy">
-                                <rect key="frame" x="20" y="93" width="230" height="170"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-Qr-ZCh">
-                                <rect key="frame" x="269" y="234" width="169" height="21"/>
+                                <rect key="frame" x="20" y="406" width="169" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFH-8u-3Va">
-                                <rect key="frame" x="269" y="263" width="169" height="149"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldb-gF-OXG">
+                                <rect key="frame" x="20" y="432" width="560" height="108"/>
+                                <color key="backgroundColor" red="0.98198632993440349" green="1" blue="0.9885772188143328" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ieh-j6-7WK" firstAttribute="top" secondItem="7JC-SA-mN6" secondAttribute="bottom" constant="206" id="8LR-v8-1tB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ldb-gF-OXG" secondAttribute="trailing" id="FEG-Eb-xq2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0HK-sg-rJy" secondAttribute="trailing" constant="-20" id="Fdo-AI-9mj"/>
+                            <constraint firstItem="KWk-xc-7ct" firstAttribute="top" secondItem="Ldb-gF-OXG" secondAttribute="bottom" constant="11" id="IDC-AF-Lpx"/>
+                            <constraint firstItem="KWk-xc-7ct" firstAttribute="top" secondItem="Ldb-gF-OXG" secondAttribute="bottom" id="NNz-2I-bjA"/>
+                            <constraint firstItem="0HK-sg-rJy" firstAttribute="leading" secondItem="Zf3-XF-rpB" secondAttribute="leadingMargin" constant="-20" id="URd-Dp-h4W"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ldb-gF-OXG" secondAttribute="leading" id="lVg-rX-0ii"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NNz-2I-bjA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="addressCityLabel" destination="RaP-OM-061" id="cTb-Rf-hOo"/>
+                        <outlet property="addressStateLabel" destination="tCz-fI-HaQ" id="fBg-LM-Z4o"/>
+                        <outlet property="addressStreetLabel" destination="peN-7f-Gwk" id="Ttn-Wf-5nE"/>
+                        <outlet property="addressZipLabel" destination="auT-3C-Hvp" id="OHQ-JT-zL7"/>
+                        <outlet property="descriptionTextView" destination="Ldb-gF-OXG" id="Q8e-rl-Xwg"/>
+                        <outlet property="landmarkImageView" destination="0HK-sg-rJy" id="0n9-Hj-hVm"/>
                         <outlet property="nameLabel" destination="ieh-j6-7WK" id="MVW-oe-50e"/>
+                        <outlet property="phoneLabel" destination="Oll-9t-iw6" id="TeU-fV-FgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xw-Ac-WPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
