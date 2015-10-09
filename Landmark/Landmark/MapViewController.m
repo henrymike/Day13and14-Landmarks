@@ -91,6 +91,14 @@
 
 #pragma mark - Location Methods
 
+#pragma mark - Location Methods
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    CLLocation *currentLocation = locations.lastObject;
+    NSLog(@"Lat:%f Lon:%f",currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+    [_locationManager stopUpdatingLocation];
+}
+
 - (void)turnOnLocationMonitoring {
     [_locationManager startUpdatingLocation];
     _landmarksMapView.showsUserLocation = true;
